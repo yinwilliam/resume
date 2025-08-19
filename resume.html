@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>你的名字 — 履歷</title>
+  <meta name="description" content="你的名字的個人履歷與作品集，包含技能、經歷、專案與聯絡方式。" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💼</text></svg>">
+  <!-- SEO 結構化資料（可選） -->
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"你的名字",
+    "jobTitle":"你的職稱",
+    "url":"https://你的網域或 GitHub Pages",
+    "sameAs":["https://github.com/yourhandle","https://www.linkedin.com/in/yourhandle/"]
+  }</script>
+  <style>
+    :root{
+      --bg:#ffffff;--fg:#0b1220;--muted:#6b7280;--card:#f8fafc;--line:#e5e7eb;--accent:#2563eb;
+      --radius:16px;--space:20px;--max:900px;--mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0b1220;--fg:#e5e7eb;--muted:#9ca3af;--card:#0f172a;--line:#243040;--accent:#60a5fa}
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans TC", Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:auto;padding:40px var(--space)}
+    header{display:grid;grid-template-columns:1fr auto;gap:var(--space);align-items:center;margin-bottom:28px}
+    .title h1{margin:0;font-size:clamp(28px,4vw,40px)}
+    .title p{margin:6px 0 0;color:var(--muted)}
+    .contact{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.02))}
+    .grid{display:grid;gap:var(--space)}
+    @media(min-width:900px){.grid{grid-template-columns:280px 1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+    h2{font-size:18px;margin:0 0 10px}
+    .list{display:grid;gap:14px}
+    .kv{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#00000008;border:1px solid var(--line)}
+    .muted{color:var(--muted)}
+    .exp{display:grid;gap:10px}
+    .exp h3{margin:0;font-size:16px}
+    .exp .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted)}
+    .exp ul{margin:8px 0 0 18px}
+    footer{margin-top:28px;color:var(--muted);text-align:center}
+
+    /* 印刷優化 */
+    @media print{
+      .wrap{padding:0}
+      header{grid-template-columns:1fr 1fr}
+      a{text-decoration:none;color:inherit}
+      .card{break-inside:avoid}
+      .badge{border:none}
+      footer{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>你的名字</h1>
+        <p>你的職稱／專長關鍵字 · 位置（台北，Remote）</p>
+      </div>
+      <div class="contact">
+        <a class="badge" href="mailto:you@example.com" aria-label="Email">📧 you@example.com</a>
+        <a class="badge" href="https://github.com/yourhandle" target="_blank" rel="noreferrer">🐙 GitHub</a>
+        <a class="badge" href="https://www.linkedin.com/in/yourhandle/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+        <a class="badge" href="tel:+886-9xx-xxx-xxx">📱 +886-9xx-xxx-xxx</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <aside class="list" aria-label="側欄">
+        <section class="card">
+          <h2>簡介</h2>
+          <p>
+            在這裡用 2–3 句話總結你的價值：年資、領域、代表性成果與你想要的職缺方向。
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>技能</h2>
+          <div class="list">
+            <div class="kv"><strong>語言 / 框架</strong><span class="muted">JavaScript, TypeScript, React, Node.js</span></div>
+            <div class="kv"><strong>工具</strong><span class="muted">Git, Docker, Playwright, Vite</span></div>
+            <div class="kv"><strong>雲端 / DevOps</strong><span class="muted">AWS, GCP, Vercel, Netlify</span></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>連結</h2>
+          <div class="list">
+            <a href="#" class="pill">🧪 作品集</a>
+            <a href="#" class="pill">✍️ 技術部落格</a>
+            <a href="#" class="pill">📄 PDF 履歷</a>
+          </div>
+        </section>
+      </aside>
+
+      <main class="list" aria-label="主內容">
+        <section class="card">
+          <h2>工作經歷</h2>
+          <div class="exp">
+            <div>
+              <h3>前端工程師 @ 好公司科技 <span class="muted">— 正職</span></h3>
+              <div class="meta">
+                <span>2022/05–至今</span>
+                <span>台北</span>
+                <span>React · TypeScript · Playwright</span>
+              </div>
+              <ul>
+                <li>負責 B2C 電商前台，主導 Next.js 架構，Lighthouse 分數由 68 → 95。</li>
+                <li>建立 e2e 自動化測試（Playwright），將回歸測試時間縮短 60%。</li>
+                <li>與設計合作導入 Design System，元件覆用率 +40%。</li>
+              </ul>
+            </div>
+            <div>
+              <h3>軟體工程師 @ 新創 <span class="muted">— 合約</span></h3>
+              <div class="meta">
+                <span>2021/03–2022/04</span>
+                <span>Remote</span>
+                <span>Node.js · GraphQL · GCP</span>
+              </div>
+              <ul>
+                <li>打造伺服器渲染與 API Gateway，首頁 TTFB 降低 35%。</li>
+                <li>導入 CI/CD 與自動化部署（Cloud Build），降低人為失誤。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>精選專案</h2>
+          <div class="exp">
+            <div>
+              <h3>Midscene 自動化測試腳本套件 <span class="muted">— 開源</span></h3>
+              <div class="meta"><span>GitHub · 2024</span></div>
+              <ul>
+                <li>封裝常用端對端測試流程與斷言，下載量 1k+/月。</li>
+                <li>提供 Chrome 擴充整合，降低入門成本。</li>
+              </ul>
+            </div>
+            <div>
+              <h3>個人投資儀表板 <span class="muted">— Side Project</span></h3>
+              <div class="meta"><span>Next.js · 2023</span></div>
+              <ul>
+                <li>用 SSR + ISR 提升首次載入體驗，整合第三方 API。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>學歷</h2>
+          <div class="exp">
+            <div>
+              <h3>某某大學 — 資訊工程學系</h3>
+              <div class="meta"><span>2016–2020</span><span>台灣</span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      最後更新：<span id="updated"></span> · © <span id="year"></span> 你的名字
+    </footer>
+  </div>
+
+  <script>
+    // 自動填入年份與更新時間
+    const d = new Date();
+    document.getElementById('year').textContent = d.getFullYear();
+    document.getElementById('updated').textContent = d.toISOString().slice(0,10);
+  </script>
+</body>
+</html>
